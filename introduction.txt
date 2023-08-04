@@ -1,0 +1,16 @@
+Ce projet génère un Dashboard à l'aide de la librairie Streamlit.
+
+Il est constitué du fichier frontend.py, qui génère le Dashboard en s'appuyant sur les 3 routes d'API décrites par 
+le fichier d'introduction de app_scoring_V2.
+Tout son code est en lien avec l'interface : il n'y a pas de prédiction faite sur ce fichier. 
+Il utilise les fonctions Streamlit st.title (création de titre), st.write (écriture de texte), 
+st.selectbox (qui génère un menu défilant dans lequel l'utilisateur va sélectionner un user_id), 
+st.button (qui crée un bouton qui "lance" la prédiction une fois un user_id sélectionné) et
+st.dataframe (retranscription d'un dataframe Pandas).
+
+Le fichier Procfile vient spécifier à Heroku comment lancer le Dashboard. 
+Le fichier setup.sh est également nécessaire pour que Heroku puisse déployer et afficher un 
+Dashboard Streamlit.
+
+requirements.txt détaille les librairies nécessaires à l'utilisation du projet par Heroku, qui les
+installe automatiquement à chaque déploiement.
